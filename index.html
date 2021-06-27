@@ -11,18 +11,37 @@
 
 <body>
   <header>
-    <h1>Header</h1>
+    <h1>COUNTRIES INFO</h1>
+    <nav>
+      <ul class="nav-list">
+        <li id="main-tab" class="nav-tab active">Main</li>
+        <li id="dashboard-tab" class="nav-tab">Dashboard</li>
+      </ul>
+    </nav>
+
   </header>
   <main>
-    <div class="table-container">
+    <section id="dashboard-container" class="dashboard-container hidden">
+
+      <h2>Dashboard</h2>
+      <ul class="stats-list">
+        <li>Total number of countries: <span class="named-span" id="tot-num"></span></li>
+        <li>Top 5 most common languages: <span class="named-span" id="top-5-lan"></span></li>
+        <li>Top 5 most common currencies: <span class="named-span" id="top-5-curr"></span></li>
+        <li>Average population:<span class="named-span" id="avg-population"></span></li>
+        <li>Average area: <span class="named-span" id="avg-area"></span></li>
+        <li>Average number of neigbours: <span class="named-span" id="avg-neigbours"></span></li>
+      </ul>
+    </section>
+    <section id="table-container" class="table-container">
       <div class="search-group">
         <input id="table-search" class="search-input" type="text" placeholder="...type to search"><br>
         <label for="range-low">Set population range:</label><br>
-        <input id="range-low" class="range-input" type="number" placeholder="from">
+        <input id="range-low" class="range-input" type="number" min="0" placeholder="from">
         <span>-</span>
-        <input id="range-hight" class="range-input" type="number"placeholder="to">
+        <input id="range-hight" class="range-input" type="number" placeholder="to">
       </div>
-      
+
       <table>
         <thead>
           <tr>
@@ -38,7 +57,7 @@
               <span id="asc-language" class="sort-btn">&#129045;</span>
               <span id="desc-language" class="sort-btn">&#129047;</span>
             </th>
-            <th >Population<br>
+            <th>Population<br>
               <span id="asc-population" class="sort-btn">&#129045;</span>
               <span id="desc-population" class="sort-btn">&#129047;</span>
             </th>
@@ -46,17 +65,17 @@
               <span id="asc-area" class="sort-btn">&#129045;</span>
               <span id="desc-area" class="sort-btn">&#129047;</span>
             </th>
-            <th>Flag<br>&emsp;</th>
+            <th>Flag</th>
           </tr>
         </thead>
         <tbody id="table-root">
-          
+
         </tbody>
       </table>
-    </div>
+    </section>
   </main>
-  <script src="./assets/scripts/main.js" type="module"></script>
-  <script src="./assets/scripts/country_card.js" type="module"></script>
+  <script src="./scripts/main.js" type="module"></script>
+  <script src="./scripts/country_card.js" type="module"></script>
 </body>
 
 </html>

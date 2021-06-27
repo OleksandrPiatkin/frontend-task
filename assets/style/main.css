@@ -4,14 +4,41 @@
   font-family: sans-serif;
 }
 
+.hidden { display: none; }
+.active { color: #039b8eb4 }
+body { background-color: #f6f6f6; }
+
 header {
   display: flex;
   min-width: 320px;
   height: 120px;
   align-items: center;
-  justify-content: center;
-  background-color: azure;
-  border-bottom: 1px solid black;
+  justify-content: space-around;
+  color: #ebebec;
+  background-color: #3d424e;
+}
+
+.named-span {
+  background-color: #039b8eb4;
+  color: #ffffff;
+  padding: 0 4px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-tab {
+  font-size: 1.5em;
+  margin-left: 1em;
+}
+
+.nav-tab:hover {
+  cursor: pointer;
+  color: #039b8eb4;
 }
 
 .sort-btn {
@@ -22,17 +49,23 @@ header {
 
 .sort-btn:hover {
   cursor: pointer;
-  background-color: rgb(230, 230, 230);
+  background-color: #d3eae880;
   transition: 0.4s;
 }
 
 .sort-btn:active {
-  background-color: rgb(175, 175, 175);
+  background-color: #039b8eb4;
   transition: 0.4s;
 }
 
 /* -- table --*/
-.table-container {
+.flag-img {
+  height: 1.4em;
+  width: auto;
+}
+
+.table-container,
+.dashboard-container {
   margin: 0 auto;
   min-width: 320px;
   max-width: 95%;
@@ -41,6 +74,7 @@ header {
 }
 
 table {
+  background-color: white;
   border-collapse: collapse;
   width: 100%;
   margin: 20px 0;
@@ -52,17 +86,23 @@ table th {
   border: 1px solid #cbbdbd;
 }
 
-tr:nth-child(even) {
-  background-color: #f0f4c3
-}
+tr:nth-child(even) { background-color: #d3eae880; }
 
 @media (max-width: 720px) {
-  .table-container table thead { display: none; }
+  h1 { font-size: 1.3em; }
+  .nav-tab { font-size: 1em; }
+
+  table td,
+  table th {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .table-container table tr { display: block; }
 
   .table-container table td {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     font-size: 14px;
   }
 
@@ -71,6 +111,15 @@ tr:nth-child(even) {
     font-weight: bold;
     margin-right: 20px;
   }
+
+  .sort-btn {
+    padding: 0 7px 0 7px;
+    margin-left: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+
+  .stats-list li { font-size: 0.9em; }
 }
 
 /* -- inputs --*/
@@ -84,4 +133,28 @@ tr:nth-child(even) {
 .range-input { 
   width: 100px;
   padding-left: 3px;
+}
+
+.range-input,
+.search-input {
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 5px; 
+}
+
+.range-input:focus,
+.search-input:focus {
+  outline: none;
+  border: 2px solid #039b8eb4;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+/* -- dashboard --*/
+.stats-list {
+  font-size: 1.3em;
+  margin: 20px 0 0 20px;
+}
+
+.stats-list li {
+  margin-bottom: 10px;
 }
