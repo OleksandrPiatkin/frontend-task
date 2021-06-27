@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  min-width: 320px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  background-color: azure;
+  border-bottom: 1px solid black;
+}
+
+.sort-btn {
+  padding: 0 5px 0 4px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.sort-btn:hover {
+  cursor: pointer;
+  background-color: rgb(230, 230, 230);
+  transition: 0.4s;
+}
+
+.sort-btn:active {
+  background-color: rgb(175, 175, 175);
+  transition: 0.4s;
+}
+
+/* -- table --*/
+.table-container {
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 95%;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+table td,
+table th {
+  padding: 10px;
+  border: 1px solid #cbbdbd;
+}
+
+tr:nth-child(even) {
+  background-color: #f0f4c3
+}
+
+@media (max-width: 720px) {
+  .table-container table thead { display: none; }
+  .table-container table tr { display: block; }
+
+  .table-container table td {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  .table-container table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 20px;
+  }
+}
+
+/* -- inputs --*/
+.search-input { 
+  height: 25px;
+  width: 250px;
+  padding-left: 5px;
+  margin-bottom: 1em;
+}
+
+.range-input { 
+  width: 100px;
+  padding-left: 3px;
+}

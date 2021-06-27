@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries Info</title>
+  <link rel="stylesheet" href="./assets/style/main.css">
+</head>
+
+<body>
+  <header>
+    <h1>Header</h1>
+  </header>
+  <main>
+    <div class="table-container">
+      <div class="search-group">
+        <input id="table-search" class="search-input" type="text" placeholder="...type to search"><br>
+        <label for="range-low">Set population range:</label><br>
+        <input id="range-low" class="range-input" type="number" placeholder="from">
+        <span>-</span>
+        <input id="range-hight" class="range-input" type="number"placeholder="to">
+      </div>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Name<br>
+              <span id="asc-name" class="sort-btn">&#129047;</span>
+              <span id="desc-name" class="sort-btn">&#129045;</span>
+            </th>
+            <th>Currency<br>
+              <span id="asc-currency" class="sort-btn">&#129045;</span>
+              <span id="desc-currency" class="sort-btn">&#129047;</span>
+            </th>
+            <th>Language<br>
+              <span id="asc-language" class="sort-btn">&#129045;</span>
+              <span id="desc-language" class="sort-btn">&#129047;</span>
+            </th>
+            <th >Population<br>
+              <span id="asc-population" class="sort-btn">&#129045;</span>
+              <span id="desc-population" class="sort-btn">&#129047;</span>
+            </th>
+            <th>Area<br>
+              <span id="asc-area" class="sort-btn">&#129045;</span>
+              <span id="desc-area" class="sort-btn">&#129047;</span>
+            </th>
+            <th>Flag<br>&emsp;</th>
+          </tr>
+        </thead>
+        <tbody id="table-root">
+          
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <script src="./assets/scripts/main.js" type="module"></script>
+  <script src="./assets/scripts/country_card.js" type="module"></script>
+</body>
+
+</html>
