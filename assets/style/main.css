@@ -123,6 +123,15 @@ tr:nth-child(even) { background-color: #d3eae880; }
 }
 
 /* -- inputs --*/
+.search-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.from-to-wrap { display: flex; }
+
+.from-to-wrap span { margin: 0 5px; }
+
 .search-input { 
   height: 25px;
   width: 250px;
@@ -137,16 +146,20 @@ tr:nth-child(even) { background-color: #d3eae880; }
 
 .range-input,
 .search-input {
+  display: flex;
+  box-sizing: border-box;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 5px; 
 }
 
 .range-input:focus,
 .search-input:focus {
+  display: flex;
+  box-sizing: border-box;
   outline: none;
-  border: 2px solid #039b8eb4;
+  border: 1px solid #039b8eb4;
   border-radius: 5px;
-  box-shadow: 0 0 10px #719ECE;
+  box-shadow: 0 0 10px #039b8eb4;
 }
 
 /* -- dashboard --*/
@@ -155,6 +168,4 @@ tr:nth-child(even) { background-color: #d3eae880; }
   margin: 20px 0 0 20px;
 }
 
-.stats-list li {
-  margin-bottom: 10px;
-}
+.stats-list li { margin-bottom: 10px; }

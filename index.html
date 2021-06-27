@@ -36,10 +36,12 @@
     <section id="table-container" class="table-container">
       <div class="search-group">
         <input id="table-search" class="search-input" type="text" placeholder="...type to search"><br>
-        <label for="range-low">Set population range:</label><br>
-        <input id="range-low" class="range-input" type="number" min="0" placeholder="from">
-        <span>-</span>
-        <input id="range-hight" class="range-input" type="number" placeholder="to">
+        <label for="range-low">Set population range:</label>
+        <div class="from-to-wrap">
+          <input id="range-low" class="range-input" type="number" min="0" placeholder="from">
+          <span>-</span>
+          <input id="range-hight" class="range-input" type="number" placeholder="to">
+        </div>
       </div>
 
       <table>
